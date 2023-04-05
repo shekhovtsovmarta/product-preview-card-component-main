@@ -44,7 +44,7 @@ body {
     5. Improve text rendering
   */
 body {
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -89,12 +89,11 @@ body {
   font-size: 0.875rem;
   color: var(--clr-neutral-400);
   background-color: var(--clr-secondary-200);
-  line-height: 2;
+
 
   /*centring*/
   display: grid;
   place-content: center;
-
   margin: 1rem;
 }
 
@@ -121,20 +120,28 @@ body {
   overflow: hidden;
   display: grid;
   max-width: 600px;
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
+
 
 }
 
 @media(min-width:600px) {
   .product {
+    --content-padding: 2rem;
     grid-template-columns: 1fr 1fr;
+
   }
 }
 
 .product__content {
-  padding: 1.5rem;
+  padding: var(--content-padding);
   display: grid;
-  gap: 1rem;
+  gap: var(--content-spacing);
+
 }
+
 
 .product__category {
   font-size: 0.82rem;
@@ -144,7 +151,7 @@ body {
 
 .product__title {
   font-family: var(--ff-accent);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: var(--fw-bold);
   color: var(--clr-neutral-900);
   line-height: 1;
@@ -169,7 +176,7 @@ body {
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-200);
   font-weight: var(--fw-bold);
-  font-size: 0.9rem;
+  font-size: 0.925rem;
 }
 
 .button[data-icon="shopping-cart"]::before {
